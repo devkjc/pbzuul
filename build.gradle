@@ -16,6 +16,12 @@ ext {
 	set('springCloudVersion', "Hoxton.SR11")
 }
 
+bootJar {
+	archiveBaseName = 'pbzuul'
+	archiveFileName = 'pbzuul.jar'
+	archiveVersion = "1.0.0"
+}
+
 dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-zuul'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
