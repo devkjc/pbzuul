@@ -5,7 +5,7 @@ management:
         include: "*"
 
 server:
-  port: 5555
+  port: 5556
 
   #Setting logging levels
 logging:
@@ -13,6 +13,8 @@ logging:
     com.netflix: WARN
     org.springframework.web: WARN
     com.thoughtmechanix: DEBUG
+  file:
+    path: /usr/local/pbzuul/logs
 
 eureka:
   instance:
@@ -21,12 +23,7 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      default-zone : localhost:8761/eureka/
+      default-zone : ec2-3-36-123-209.ap-northeast-2.compute.amazonaws.com:8761/eureka/
 
-#
-#zuul:
-#  prefix:  /api
-#  routes:
-#    organizationservice: /organization/**
 zuul:
   sensitive-headers: Cookie,Set-Cookie
