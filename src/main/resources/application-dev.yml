@@ -1,29 +1,4 @@
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
-server:
-  port: 5556
-
   #Setting logging levels
 logging:
-  level:
-    com.netflix: WARN
-    org.springframework.web: WARN
-    com.thoughtmechanix: DEBUG
   file:
     path: /usr/local/pbzuul/logs
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      default-zone : ec2-3-36-123-209.ap-northeast-2.compute.amazonaws.com:8761/eureka/
-
-zuul:
-  sensitive-headers: Cookie,Set-Cookie
