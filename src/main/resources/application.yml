@@ -16,12 +16,12 @@ logging:
 
 eureka:
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
   client:
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      default-zone : http://ec2-3-37-74-211.ap-northeast-2.compute.amazonaws.com:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : ${EUREKA_URI:http://ec2-3-37-74-211.ap-northeast-2.compute.amazonaws.com:8761/eureka}
 #
 #zuul:
 #  prefix:  /api
