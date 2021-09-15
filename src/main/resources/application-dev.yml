@@ -2,3 +2,12 @@
 logging:
   file:
     path: /usr/local/pbzuul/logs
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone : ${EUREKA_URI:http://ec2-3-37-74-211.ap-northeast-2.compute.amazonaws.com:8761/eureka}
