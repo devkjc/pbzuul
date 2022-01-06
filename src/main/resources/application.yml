@@ -21,7 +21,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone : http://58.149.234.98:5003/eureka/
+      defaultZone : http://localhost:5003/eureka/
 #
 #zuul:
 #  prefix:  /api
